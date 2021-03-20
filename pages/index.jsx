@@ -38,6 +38,7 @@ export default () => {
           type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+        <script async defer data-domain="tietgenfestival.dk" src="https://nsa.janschill.de/js/plausible.js"></script>
         <script
           async
           defer
