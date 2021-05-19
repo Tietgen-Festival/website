@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "now-build": "next build",
-    "startlocal": "next start -p $PORT"
+    "startlocal": "next start -p $PORT",
+    "deploy": "next build && next export"
   },
   "repository": {
     "type": "git",
