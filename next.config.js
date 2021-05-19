@@ -1,3 +1,4 @@
 module.exports = {
-  target: 'serverless',
+  basePath: '/tietgenfestival',
+  assetPrefix: '/tietgenfestival/'
 };
