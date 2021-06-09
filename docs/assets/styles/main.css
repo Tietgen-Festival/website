@@ -1,0 +1,18 @@
+:root {
+  --lightblue: "#b4dff1";
+  --pink: "#ff008c";
+  --lightpink: "#f4a8b3";
+  --green: "#11ea00";
+  --yellow: "#ffe600";
+  --teal: "#32b5ac";
+  --orange: "#ea6400";
+  --red: "#e8434c";
+  --gray: "#c6c6c6";
+  --blue: "#0012ff";
+  --purple: "#d900ea";
+  --gradientleftright: linear-gradient(to right,#FF008C, #FFE600);
+  --gradientdown: linear-gradient(#FF008C, #FFE600);
+  --gradientdownwithwhite: linear-gradient(#FFE600, white 5%);
+  --dark: "#1f1f1f";
+  --white: "#ffffff";
+}
