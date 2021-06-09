@@ -35,11 +35,6 @@ export default () => (
 
       </p>
       <p>
-        The general ticket sale takes place between March 1st at 10:00 and September 3rd at 23:59.
-      Prices are <b>145 DKK</b> (+10,- ticket fee) for one-day tickets, <br />
-      and <b>215 DKK</b> (+10,- ticket fee) for two-day tickets.
-      </p>
-      <p>
         Tickets are purchased with the login all residents have received in their mailbox.
         There is no limit on the number of tickets a resident can buy, but be aware that tickets
        can sell out, and residents are therefore not guaranteed tickets. <b>Last year 2-day tickets sold out within 60 hours!</b>
