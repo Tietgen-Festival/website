@@ -12,19 +12,24 @@
     <script async defer data-domain="tietgenfestival.dk" src="https://nsa.janschill.de/js/plausible.js"></script>
     <script async defer src="https://cdn-ticket.livebackend.com/prod/45/embed/877.js?ver=pmgr1r"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 
 <body>
-    <header>
-        <h1>Tietgen Festival</h1>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tickets">Tickets</a></li>
-        </ul>
+    <header class="header">
+        <h1 class="header__logo">Tietgen Festival</h1>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__list-item"><a class="link link--header" href="#about">About</a></li>
+                <li class="header__list-item"><a class="link link--header" href="#tickets">Tickets</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
-            <video autoplay loop muted playsinline poster="/static/video_poster.jpg">
+            <video autoplay loop muted playsinline
+                poster="assets/images/tietgenkollegiet-tietgen-festival-video_poster.jpg">
                 <source src="assets/videos/tietgenkollegiet-tietgen-festival-intro-video.mp4" type="video/mp4" /> Your
                 browser does not
                 support the video tag.

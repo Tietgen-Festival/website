@@ -1,18 +1,91 @@
 :root {
-  --lightblue: "#b4dff1";
-  --pink: "#ff008c";
-  --lightpink: "#f4a8b3";
-  --green: "#11ea00";
-  --yellow: "#ffe600";
-  --teal: "#32b5ac";
-  --orange: "#ea6400";
-  --red: "#e8434c";
-  --gray: "#c6c6c6";
-  --blue: "#0012ff";
-  --purple: "#d900ea";
-  --gradientleftright: linear-gradient(to right,#FF008C, #FFE600);
-  --gradientdown: linear-gradient(#FF008C, #FFE600);
-  --gradientdownwithwhite: linear-gradient(#FFE600, white 5%);
-  --dark: "#1f1f1f";
-  --white: "#ffffff";
+  --pink: #ff008c;
+  --yellow: #ffe600;
+  --lightblue: #b4dff1;
+  --lightpink: #f4a8b3;
+  --green: #11ea00;
+  --teal: #32b5ac;
+  --orange: #ea6400;
+  --red: #e8434c;
+  --gray: #c6c6c6;
+  --blue: #0012ff;
+  --purple: #d900ea;
+  --gradientleftright: linear-gradient(to right, var(--pink), var(--yellow));
+  --gradientdown: linear-gradient( var(--pink), var(--yellow));
+  --gradientdownwithwhite: linear-gradient(var(--yellow), white 5%);
+  --dark: #1f1f1f;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/roboto-v27-latin-500.woff2') format('woff2'),
+       url('../fonts/roboto-v27-latin-500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/roboto-v27-latin-700.woff2') format('woff2'),
+       url('../fonts/roboto-v27-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TypoPRO BebasNeue';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/typopro-bebasneue-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TypoPRO BebasNeue';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/typopro-bebasneue-regular.woff') format('woff');
+}
+
+html {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: var(--black);
+}
+
+.header {
+  font-family: 'TypoPRO BebasNeue';
+  font-size: 1.6rem;
+  font-weight: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-image: var(--gradientleftright);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  color: var(--white);
+  padding: 20px;
+}
+
+.header__list-item {
+  display: inline-block;
+}
+
+.link--header {
+  display: block;
+  color: var(--black);
+  text-decoration: none;
+  padding: 20px;
 }
