@@ -1,6 +1,7 @@
 :root {
   --pink: #ff008c;
   --yellow: #ffe600;
+  --darkyellow: #e2b00a;
   --lightblue: #b4dff1;
   --lightpink: #f4a8b3;
   --green: #11ea00;
@@ -78,7 +79,6 @@ p {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  color: var(--dark);
 }
 
 p + p {
@@ -203,12 +203,21 @@ p + p {
   max-width: 900px;
 }
 
+.section__article--short {
+  max-width: 650px;
+}
+
 .section--about {
   background-color: var(--white);
 }
 
 .section--tickets {
   background-color: var(--yellow);
+}
+
+.section--disclaimer {
+  background-color: var(--pink);
+  color: var(--white);
 }
 
 .title {
@@ -218,6 +227,10 @@ p + p {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+}
+
+.title--gradient {
   background: linear-gradient(to right, var(--pink), var(--yellow),  var(--pink));
   background-size: 200% 200%;
   animation: rainbow 4s ease-in-out infinite;
@@ -233,4 +246,29 @@ p + p {
   background-clip: text;
   -webkit-background-clip:text;
   color: rgba(0, 0, 0, 0);
+}
+
+.title--yellow-gradient {
+  background: linear-gradient(to right, var(--yellow), var(--darkyellow),  var(--yellow));
+  background-size: 200% 200%;
+  animation: rainbow 4s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.title--small {
+  font-size: 5rem;
+}
+
+.title--tiny {
+  font-size: 2rem;
+}
+
+.section--disclaimer p {
+  font-size: 1.25rem;
+}
+
+.section--disclaimer p + p  {
+  margin-top: 15px;
 }
