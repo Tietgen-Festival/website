@@ -11,10 +11,13 @@
   --blue: #0012ff;
   --purple: #d900ea;
   --gradientleftright: linear-gradient(to right, var(--pink), var(--yellow));
-  --gradientdown: linear-gradient( var(--pink), var(--yellow));
+  --gradientdown: linear-gradient(var(--pink), var(--yellow));
   --gradientdownwithwhite: linear-gradient(var(--yellow), white 5%);
-  --dark: #1f1f1f;
+  --dark: #2e2e2e;
   --white: #ffffff;
+  --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
+  --font-family-paragraph: 'Roboto';
+  --font-family-titles: 'TypoPRO BebasNeue';
 }
 
 @font-face {
@@ -51,17 +54,44 @@
        url('../fonts/typopro-bebasneue-regular.woff') format('woff');
 }
 
+
+@keyframes rainbow {
+  0% {
+    background-position:left
+  }
+  50% {
+    background-position:right
+  }
+  100% {
+    background-position:left
+  }
+}
+
 html {
-  font-family: 'Roboto';
+  font-family: Helvetica;
   font-size: 16px;
-  color: var(--black);
+  color: var(--dark);
+}
+
+p {
+  line-height: 1.1;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark);
+}
+
+p + p {
+  margin-top: 45px;
 }
 
 .header {
-  font-family: 'TypoPRO BebasNeue';
+  font-family: var(--font-family-titles);
   font-size: 1.6rem;
   font-weight: 400;
+  text-transform: uppercase;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
@@ -70,12 +100,9 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  pointer-events: none;
-  text-transform: uppercase;
 }
 
 .header__logo {
-  color: var(--white);
   padding: 20px;
 }
 
@@ -85,7 +112,125 @@ html {
 
 .link--header {
   display: block;
-  color: var(--black);
-  text-decoration: none;
   padding: 20px;
+}
+
+.link {
+  color: rgba(0, 0, 0, 1);
+  transition: color ease-in-out 350ms;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--pink), var(--yellow),  var(--pink));
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+}
+
+.link:hover {
+  color:rgba(0, 0, 0, 0);
+}
+
+.link--white {
+  color: rgba(255, 255, 255);
+}
+
+.link--white:hover {
+  color:rgba(rgba(255, 255, 255), 0);
+}
+
+.section-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-titles);
+}
+
+.section-banner__video {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.section-banner__claim {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-banner__logo {
+  width: 35vw;
+  margin-right: 15px;
+  border-radius: 100%;
+  box-shadow: var(--box-shadow)
+}
+
+@media all and (min-width: 850px) {
+  .section-banner__logo {
+    width: calc(0.35 * 800px);
+  }
+}
+
+.section-banner__text {
+  max-width: 500px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--yellow);
+  text-transform: uppercase;
+}
+
+.sup {
+  font-size: 2rem;
+  vertical-align: top;
+}
+
+.section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+}
+
+.section__aside {
+  text-align: center;
+}
+
+.section__article {
+  max-width: 900px;
+}
+
+.section--about {
+  background-color: var(--white);
+}
+
+.section--tickets {
+  background-color: var(--yellow);
+}
+
+.title {
+  padding: 20px;
+  font-family: var(--font-family-titles);
+  font-size: 14rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--pink), var(--yellow),  var(--pink));
+  background-size: 200% 200%;
+  animation: rainbow 4s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.title--pink-gradient {
+  background: linear-gradient(to right, var(--pink), var(--lightpink),  var(--pink));
+  background-size: 200% 200%;
+  animation: rainbow 4s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color: rgba(0, 0, 0, 0);
 }
