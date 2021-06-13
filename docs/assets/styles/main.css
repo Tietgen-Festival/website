@@ -85,9 +85,15 @@ html {
 
 p {
   line-height: 1.1;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
+}
+
+@media all and (min-width: 850px) {
+  p {
+    font-size: 2rem;
+  }
 }
 
 p + p {
@@ -119,11 +125,6 @@ p + p {
   display: inline-block;
 }
 
-.link--header {
-  display: block;
-  padding: 20px;
-}
-
 .link {
   color: rgba(0, 0, 0, 1);
   transition: color ease-in-out 350ms;
@@ -137,6 +138,17 @@ p + p {
 
 .link:hover {
   color:rgba(0, 0, 0, 0);
+}
+
+.link--header {
+  display: block;
+  padding: 20px 10px;
+}
+
+@media all and (min-width: 850px) {
+  .link--header {
+    padding: 20px;
+  }
 }
 
 .link--white {
@@ -168,6 +180,7 @@ p + p {
 }
 
 .section-banner__claim {
+  flex-direction: column;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -175,6 +188,12 @@ p + p {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+@media all and (min-width: 850px) {
+  .section-banner__claim {
+    flex-direction: row;
+  }
 }
 
 .section-banner__logo {
@@ -191,12 +210,23 @@ p + p {
 }
 
 .section-banner__text {
+  font-size: 2rem;
+  text-align: center;
   max-width: 500px;
-  font-size: 4rem;
+  padding: 20px;
   font-weight: bold;
-  color: var(--yellow);
   text-transform: uppercase;
+  color: var(--yellow);
 }
+
+@media all and (min-width: 850px) {
+  .section-banner__text {
+    font-size: 4rem;
+    text-align: left;
+  }
+}
+
+
 
 .sup {
   font-size: 2rem;
@@ -204,12 +234,17 @@ p + p {
 }
 
 .section {
-  width: 100%;
-  padding: 50px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: calc(100vh - 80px);
+}
+
+@media all and (min-width: 850px) {
+  .section {
+    padding: 50px;
+  }
 }
 
 .section__aside {
@@ -241,7 +276,7 @@ p + p {
   position: relative;
   padding: 20px;
   font-family: var(--font-family-titles);
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -286,7 +321,13 @@ p + p {
 }
 
 .title--small {
-  font-size: 5rem;
+  font-size: 3rem;
+}
+
+@media all and (min-width: 600px) {
+  .title--small {
+    font-size: 5rem;
+  }
 }
 
 .title--tiny {
@@ -308,15 +349,24 @@ p + p {
 
 .arrow {
   border: solid var(--pink);
-  border-width: 0 5px 5px 0;
+  border-width: 0 4px 4px 0;
+  padding: 5px;
+  margin-left: 7px;
   display: inline-block;
-  padding: 8px;
   position: absolute;
   top: 40%;
-  margin-left: 10px;
   transform: rotate(-45deg) translateY(-50%);
   opacity: 0.6;
   transition: all ease-in-out 250ms;
+}
+
+@media all and (min-width: 850px) {
+  .arrow {
+    border: solid var(--pink);
+    border-width: 0 5px 5px 0;
+    padding: 8px;
+    margin-left: 10px;
+  }
 }
 
 .title--link:hover .arrow {
