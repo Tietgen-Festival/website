@@ -138,6 +138,10 @@ p + p {
   color:rgba(rgba(255, 255, 255), 0);
 }
 
+.link--underline {
+  text-decoration: underline;
+}
+
 .section-banner {
   display: flex;
   justify-content: center;
@@ -221,6 +225,7 @@ p + p {
 }
 
 .title {
+  position: relative;
   padding: 20px;
   font-family: var(--font-family-titles);
   font-size: 14rem;
@@ -228,6 +233,10 @@ p + p {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+}
+
+.title--margin-top {
+  margin-top: 25px;
 }
 
 .title--gradient {
@@ -271,4 +280,26 @@ p + p {
 
 .section--disclaimer p + p  {
   margin-top: 15px;
+}
+
+.wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.arrow {
+  border: solid var(--pink);
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 8px;
+  position: absolute;
+  top: 40%;
+  margin-left: 10px;
+  transform: rotate(-45deg) translateY(-50%);
+  opacity: 0.6;
+  transition: all ease-in-out 250ms;
+}
+
+.title--link:hover .arrow {
+  transform: rotate(-45deg) translate(3px, calc(-50% + 3px));
 }
