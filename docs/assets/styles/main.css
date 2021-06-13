@@ -204,6 +204,7 @@ p + p {
 }
 
 .section {
+  width: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -240,11 +241,17 @@ p + p {
   position: relative;
   padding: 20px;
   font-family: var(--font-family-titles);
-  font-size: 14rem;
+  font-size: 10rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+}
+
+@media all and (min-width: 600px) {
+  .title {
+    font-size: 14rem;
+  }
 }
 
 .title--margin-top {
