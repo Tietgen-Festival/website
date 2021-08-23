@@ -145,10 +145,6 @@ p + p {
   transition: opacity 0.64s ease;
 }
 
-.header__list .header__list-item a {
-  color: white;
-}
-
 @media all and (min-width: 850px) {
   .header__nav {
     display: block;
