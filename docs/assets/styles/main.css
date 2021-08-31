@@ -205,6 +205,10 @@ p + p {
   text-decoration: underline;
 }
 
+.link--tiny {
+  font-size: 1rem;
+}
+
 .section-banner {
   display: flex;
   justify-content: center;
