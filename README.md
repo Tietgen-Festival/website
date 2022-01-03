@@ -2,6 +2,10 @@
 
 Repository for the website of Tietgen Festival, found at https://tietgenfestival.dk/.
 
+## Getting Started
+
+The website is automatically deployed with GitHub Pages on merges to `main`. The content in `docs/` is rendered on the specified domain.
+
 ## Services Used
 
 | Service | Address |
