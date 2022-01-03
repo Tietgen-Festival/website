@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Proof HTML
-        uses: anishathalye/proof-html@v1.2.0
+        uses: Cyb3r-Jak3/html5validator-action@v7
+        with:
+          root: docs/
