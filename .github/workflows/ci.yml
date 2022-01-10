@@ -3,7 +3,7 @@ name: CI
 on: push
 
 jobs:
-  validatehtml:
+  validate-html:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,3 +11,8 @@ jobs:
         uses: Cyb3r-Jak3/html5validator-action@master
         with:
           root: docs/
+  lint-css:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint Action
+        uses: wearerequired/lint-action@v1.10.0
