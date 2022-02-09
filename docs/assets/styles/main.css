@@ -1,8 +1,10 @@
 :root {
-  --pink: #ff008c;
-  --yellow: #ffe600;
-  --darkyellow: #e2b00a;
+  --primary: #ff008c;
+  --secondary: #ffe600;
+  --dimmed-primary: #f4a8b3;
+  --dimmed-secondary: #e2b00a;
   --lightblue: #b4dff1;
+<<<<<<< HEAD
   --lightpink: #f4a8b3;
   --green: #5FF95F;
   --teal: #32b5ac;
@@ -18,10 +20,28 @@
   --gradientrightleft: linear-gradient(to left, var(--pink), var(--purple));
   --gradientdown: linear-gradient(var(--pink), var(--purple));
   --gradientdownwithwhite: linear-gradient(var(--purple), white 5%);
+=======
+>>>>>>> 4e1a9ebb6081d6718f31c79c42e87a7466a61562
   --dark: #2e2e2e;
-  --white: #ffffff;
+  --light: #ffffff;
+  --gradient-to-right-primary-secondary: linear-gradient(to right, var(--primary), var(--secondary));
+  --gradient-to-right-primary-secondary-primary: linear-gradient(to right, var(--primary), var(--secondary), var(--primary));
+  --gradient-to-right-primary-dprimary: linear-gradient(to right, var(--primary), var(--dimmed-primary));
+  --gradient-to-left-primary-secondary: linear-gradient(to left, var(--primary), var(--secondary));
+  --gradient-primary-down-primary-secondary: linear-gradient(var(--primary), var(--secondary));
+  --gradient-to-right-secondary-dsecondary-secondary: linear-gradient(to right, var(--secondary), var(--dimmed-secondary),  var(--secondary));
+  --gradient-to-right-primary-dprimary-primary: linear-gradient(to right, var(--primary), var(--dimmed-primary),  var(--primary));
   --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
-  --font-family-titles: 'TypoPRO BebasNeue';
+  --font-family-title: 'TypoPRO BebasNeue';
+  --font-size-standard: 16px;
+  --font-size-small: 1.25rem;
+  --font-size-medium: 1.65rem;
+  --font-size-large: 2rem;
+  --font-size-x-large: 2.5rem;
+  --font-size-xx-large: 3rem;
+  --font-size-xxx-large: 4rem;
+  --font-size-huge: 7rem;
+  --font-size-x-huge: 14rem;
 }
 
 @font-face {
@@ -63,7 +83,7 @@
 
 html {
   font-family: Helvetica;
-  font-size: 16px;
+  font-size: var(--font-size-standard);
   color: var(--dark);
 }
 
@@ -73,14 +93,14 @@ body.navigation-open {
 
 p {
   line-height: 1.1;
-  font-size: 1.25rem;
+  font-size: var(--font-size-small);
   font-weight: bold;
   text-align: center;
 }
 
 @media all and (min-width: 850px) {
   p {
-    font-size: 2rem;
+    font-size: var(--font-size-large);
   }
 }
 
@@ -89,8 +109,8 @@ p + p {
 }
 
 .header {
-  font-family: var(--font-family-titles);
-  font-size: 1.6rem;
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-medium);
   font-weight: 400;
   text-transform: uppercase;
   position: fixed;
@@ -99,7 +119,7 @@ p + p {
   left: 0;
   right: 0;
   height: 80px;
-  background-image: var(--gradientleftright);
+  background-image: var(--gradient-to-right-primary-secondary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,7 +147,7 @@ p + p {
   width: 100%;
   height: 100%;
   right: 0;
-  background-image: var(--gradientdown);
+  background-image: var(--gradient-primary-down-primary-secondary);
 }
 
 .header__list {
@@ -135,7 +155,7 @@ p + p {
   flex-flow: column;
   align-items: center;
   height: 100%;
-  font-size: 4rem;
+  font-size: var(--font-size-xxx-large);
   justify-content: center;
   font-weight: bold;
   opacity: 0;
@@ -160,7 +180,7 @@ p + p {
     flex-flow: initial;
     align-items: initial;
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: var(--font-size-medium);
     opacity: 1;
   }
 
@@ -215,7 +235,7 @@ p + p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--font-family-titles);
+  font-family: var(--font-family-title);
 }
 
 .section-banner__video {
@@ -258,12 +278,13 @@ p + p {
 }
 
 .section-banner__text {
-  font-size: 2rem;
+  font-size: var(--font-size-large);
   text-align: center;
   max-width: 500px;
   padding: 20px;
   font-weight: bold;
   text-transform: uppercase;
+
   color: var(--green);
   -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: grey;
@@ -271,13 +292,13 @@ p + p {
 
 @media all and (min-width: 850px) {
   .section-banner__text {
-    font-size: 4rem;
+    font-size: var(--font-size-xxx-large);
     text-align: left;
   }
 }
 
 .sup {
-  font-size: 2rem;
+  font-size: var(--font-size-large);
   vertical-align: top;
 }
 
@@ -308,27 +329,27 @@ p + p {
 }
 
 .section--about {
-  background-color: var(--white);
+  background-color: var(--light);
 }
 
 .section--schedule {
-  background-color: var(--white);
+  background-color: var(--light);
 }
 
 .section--tickets {
-  background-color: var(--yellow);
+  background-color: var(--secondary);
 }
 
 .section--disclaimer {
-  background-color: var(--pink);
-  color: var(--white);
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 .title {
   position: relative;
   padding: 20px;
-  font-family: var(--font-family-titles);
-  font-size: 7rem;
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-huge);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -337,7 +358,7 @@ p + p {
 
 @media all and (min-width: 600px) {
   .title {
-    font-size: 14rem;
+    font-size: var(--font-size-x-huge);
   }
 }
 
@@ -354,8 +375,8 @@ p + p {
   color: rgba(46, 46, 46, 0);
 }
 
-.title--pink-gradient {
-  background: linear-gradient(to right, var(--pink), var(--lightpink),  var(--pink));
+.title--primary-gradient {
+  background: var(--gradient-to-right-primary-dprimary-primary);
   background-size: 200% 200%;
   animation: rainbow 4s ease-in-out infinite;
   background-clip: text;
@@ -363,8 +384,8 @@ p + p {
   color: rgba(46, 46, 46, 0);
 }
 
-.title--yellow-gradient {
-  background: linear-gradient(to right, var(--yellow), var(--darkyellow),  var(--yellow));
+.title--secondary-gradient {
+  background: var(--gradient-to-right-secondary-dsecondary-secondary);
   background-size: 200% 200%;
   animation: rainbow 4s ease-in-out infinite;
   background-clip: text;
@@ -373,21 +394,21 @@ p + p {
 }
 
 .title--small {
-  font-size: 3rem;
+  font-size: var(--font-size-xx-large);
 }
 
 @media all and (min-width: 600px) {
   .title--small {
-    font-size: 5rem;
+    font-size: var(--font-size-xxx-large);
   }
 }
 
 .title--tiny {
-  font-size: 2rem;
+  font-size: var(--font-size-large);
 }
 
 .section--disclaimer p {
-  font-size: 1.25rem;
+  font-size: var(--font-size-small);
 }
 
 .section--disclaimer p + p  {
@@ -400,7 +421,7 @@ p + p {
 }
 
 .arrow {
-  border: solid var(--pink);
+  border: solid var(--primary);
   border-width: 0 4px 4px 0;
   padding: 5px;
   margin-left: 7px;
@@ -414,7 +435,7 @@ p + p {
 
 @media all and (min-width: 850px) {
   .arrow {
-    border: solid var(--pink);
+    border: solid var(--primary);
     border-width: 0 5px 5px 0;
     padding: 8px;
     margin-left: 10px;
@@ -432,7 +453,7 @@ p + p {
 }
 
 .schedule-block {
-  font-family: var(--font-family-titles);
+  font-family: var(--font-family-title);
   padding: 20px 10px;
 }
 
@@ -457,37 +478,37 @@ p + p {
 .schedule-block__header {
   display: flex;
   align-items: center;
-  background-image: var(--gradientrightleft);
+  background-image: var(--gradient-to-left-primary-secondary);
   padding: 10px 10px 0;
   margin-bottom: 20px;
 }
 
 .schedule-block__header--reverse {
-  background-image: var(--gradientleftright);
+  background-image: var(--gradient-to-right-primary-secondary);
 }
 
 .schedule-block__content {
-  font-size: 1.25rem;
+  font-size: var(--font-size-small);
 }
 
 @media all and (min-width: 450px) {
   .schedule-block__content {
-    font-size: 1.75rem;
+    font-size: var(--font-size-medium);
   }
 }
 
 @media all and (min-width: 1200px) {
   .schedule-block__content {
-    font-size: 2.5rem;
+    font-size: var(--font-size-x-large);
   }
 }
 
 .schedule-block__title {
-  font-size: 3rem;
+  font-size: var(--font-size-xx-large);
   text-transform: uppercase;
   font-weight: bold;
-  font-family: var(--font-family-titles);
-  color: var(--white);
+  font-family: var(--font-family-title);
+  color: var(--light);
 }
 
 .schedule-block__schedule-item {
@@ -511,19 +532,19 @@ p + p {
 
 .schedule-block__text--highlight,
 .schedule-block__highlight {
-  background-image: var(--gradientleftright);
-  color: var(--white);
+  background-image: var(--gradient-to-right-primary-secondary);
+  color: var(--light);
   padding: 3px 3px 0;
 }
 
 .schedule-block__text--highlight-reverse,
 .schedule-block__highlight--reverse {
-  background-image: var(--gradientrightleft);
+  background-image: var(--gradient-to-left-primary-secondary);
 }
 
 .schedule-block__text--short-highlight {
-  background-image: var(--gradientleftrightpinklightpink);
-  color: var(--white);
+  background-image: var(--gradient-to-right-primary-dprimary);
+  color: var(--light);
   padding: 3px 3px 0;
 }
 
@@ -534,7 +555,7 @@ p + p {
 
 @media all and (min-width: 1200px) {
   .schedule-block__subtext {
-    font-size: 1.25rem;
+    font-size: var(--font-size-small);
   }
 }
 
@@ -549,30 +570,30 @@ p + p {
 @media all and (min-width: 450px) {
   .schedule-block__time {
     width: 110px;
-    font-size: 1.25rem;
+    font-size: var(--font-size-small);
   }
 }
 
 @media all and (min-width: 900px) {
   .schedule-block__time {
     width: 130px;
-    font-size: 1.5rem;
+    font-size: var(--font-size-medium);
   }
 }
 
 @media all and (min-width: 1200px) {
   .schedule-block__time {
     width: 190px;
-    font-size: 2.5rem;
+    font-size: var(--font-size-x-large);
   }
 }
 
 .schedule-block__time--before::before,
 .schedule-block__time--after::after {
-  content: "";
+  content: '';
   display: inline-block;
   padding: 10px 5px;
-  background-color: var(--pink);
+  background-color: var(--primary);
   margin: 0 7px 0;
 }
 
