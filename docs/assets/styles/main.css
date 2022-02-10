@@ -4,7 +4,6 @@
   --dimmed-primary: #f4a8b3;
   --dimmed-secondary: #e2b00a;
   --lightblue: #b4dff1;
-<<<<<<< HEAD
   --lightpink: #f4a8b3;
   --green: #5FF95F;
   --teal: #32b5ac;
@@ -15,13 +14,6 @@
   --darkblue: #524DEF;
   --purple: #B946EE;
   --cyan: #00F1D9;
-  --gradientleftright: linear-gradient(to right, var(--pink), var(--purple));
-  --gradientleftrightpinklightpink: linear-gradient(to right, var(--pink), var(--lightpink));
-  --gradientrightleft: linear-gradient(to left, var(--pink), var(--purple));
-  --gradientdown: linear-gradient(var(--pink), var(--purple));
-  --gradientdownwithwhite: linear-gradient(var(--purple), white 5%);
-=======
->>>>>>> 4e1a9ebb6081d6718f31c79c42e87a7466a61562
   --dark: #2e2e2e;
   --light: #ffffff;
   --gradient-to-right-primary-secondary: linear-gradient(to right, var(--primary), var(--secondary));
@@ -208,7 +200,7 @@ p + p {
   color: white;
   transition: color ease-in-out 350ms;
   text-decoration: none;
-  background: linear-gradient(to right, var(--pink), var(--blue),  var(--purple));
+  background: linear-gradient(to right, var(--primary), var(--blue),  var(--purple));
   background-size: 200% 200%;
   animation: rainbow 2s ease-in-out infinite;
   background-clip: text;
@@ -216,7 +208,7 @@ p + p {
 }
 
 .link:hover {
-  color:rgba(46, 46, 46, 50);
+  color:rgba(46, 46, 46, 0);
 }
 
 .link--header {
@@ -235,7 +227,7 @@ p + p {
 }
 
 .link--white:hover {
-  color:rgba(rgba(255, 255, 255), 0);
+  color:rgba(46, 46, 46, 00);
 }
 
 .link--underline {
