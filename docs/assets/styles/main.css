@@ -31,9 +31,9 @@
   --font-size-medium: 1.65rem;
   --font-size-large: 2rem;
   --font-size-x-large: 2.5rem;
-  --font-size-xx-large: 3rem;
+  --font-size-xx-large: 4vw;
   --font-size-xxx-large: 4rem;
-  --font-size-huge: 7rem;
+  --font-size-huge: 8vw;
   --font-size-x-huge: 14rem;
 }
 
@@ -420,7 +420,7 @@ p + p {
 
 @media all and (min-width: 600px) {
   .title--small {
-    font-size: var(--font-size-xxx-large);
+    font-size: var(--font-size-xx-large);
   }
 }
 
