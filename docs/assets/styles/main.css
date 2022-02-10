@@ -286,21 +286,18 @@ p + p {
 }
 
 .section-banner__text {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-small);
   text-align: center;
   max-width: 500px;
   padding: 20px;
   font-weight: bold;
   text-transform: uppercase;
-
   color: var(--green);
-  -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: grey;
 }
 
 @media all and (min-width: 850px) {
   .section-banner__text {
-    font-size: var(--font-size-xxx-large);
+    font-size: var(--font-size-xx-large);
     text-align: left;
   }
 }
@@ -334,6 +331,7 @@ p + p {
 }
 
 .section__article-on-gradient {
+  max-width: 900px;
   color: black;
 }
 
