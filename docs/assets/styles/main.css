@@ -32,7 +32,7 @@
   --gradient-to-right-secondary-dsecondary-secondary: linear-gradient(to right, var(--secondary), var(--dimmed-secondary),  var(--secondary));
   --gradient-to-right-primary-dprimary-primary: linear-gradient(to right, var(--primary), var(--dimmed-primary),  var(--primary));
   --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
-  --font-family-title: 'TypoPRO BebasNeue';
+  --font-family-title: 'Bio Sans ExtraBold Italic';
   --font-size-standard: 16px;
   --font-size-small: 1.25rem;
   --font-size-medium: 1.65rem;
@@ -58,6 +58,19 @@
   font-weight: 400;
   src: local(''),
        url('../fonts/typopro-bebasneue-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bio Sans Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/Bio-Sans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bio Sans ExtraBold Italic';
+  font-style: normal;
+  src: local(''), url('../fonts/Bio-Sans-ExtraBold-Italic.woff') format('woff');
 }
 
 @keyframes rainbow {
@@ -93,6 +106,7 @@ body.navigation-open {
 
 p {
   line-height: 1.1;
+  font-family: "Bio Sans Regular", serif;
   font-size: var(--font-size-small);
   font-weight: bold;
   text-align: center;
