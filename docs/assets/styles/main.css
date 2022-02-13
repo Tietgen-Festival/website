@@ -88,7 +88,7 @@
 }
 
 html {
-  font-family: Helvetica;
+  font-family: Helvetica, serif;
   font-size: var(--font-size-standard);
   color: var(--dark);
   scroll-behavior: smooth;
@@ -386,24 +386,6 @@ p + p {
   background-clip: text;
   -webkit-background-clip:text;
   color: rgba(46, 46, 46, 0);
-}
-
-.title--primary-gradient {
-  background: var(--gradient-to-right-primary-dprimary-primary);
-  background-size: 200% 200%;
-  animation: rainbow 4s ease-in-out infinite;
-  background-clip: text;
-  -webkit-background-clip:text;
-  color: rgba(46, 46, 46, 0);
-}
-
-.title--secondary-gradient {
-  background: var(--gradient-to-right-secondary-dsecondary-secondary);
-  background-size: 200% 200%;
-  animation: rainbow 4s ease-in-out infinite;
-  background-clip: text;
-  -webkit-background-clip:text;
-  color: rgba(0, 0, 0, 0);
 }
 
 .white-gradient {
