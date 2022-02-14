@@ -32,8 +32,10 @@
   --font-size-large: 2rem;
   --font-size-x-large: 2.5rem;
   --font-size-xx-large: 4vw;
-  --font-size-xxx-large: 4rem;
-  --font-size-huge: 8vw;
+  /* --font-size-xxx-large: 4rem; */
+  --font-size-xxx-large: max(26px, min(8vw, 40px));
+/*  --font-size-huge: 8vw; */
+  --font-size-huge: max(40px, min(8vw, 80px));
   --font-size-x-huge: 14rem;
 }
 
