@@ -31,7 +31,7 @@
   --font-size-medium: 1.65rem;
   --font-size-large: 2rem;
   --font-size-x-large: 2.5rem;
-  --font-size-xx-large: 4vw;
+  --font-size-xx-large: max(22px, min(4vw, 45px));
   --font-size-xxx-large: max(26px, min(8vw, 40px));
   --font-size-huge: max(40px, min(8vw, 70px));
   --font-size-x-huge: 14rem;
