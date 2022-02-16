@@ -308,6 +308,13 @@ p + p {
   vertical-align: top;
 }
 
+@media all and (max-width: 600px) {
+  .sup {
+    font-size: var(--font-size-small);
+  }
+}
+
+
 .section {
   padding: 20px;
   display: flex;
