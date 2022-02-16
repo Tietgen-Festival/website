@@ -4,7 +4,6 @@
   --dimmed-primary: #f4a8b3;
   --dimmed-secondary: #e2b00a;
   --lightblue: #b4dff1;
-<<<<<<< HEAD
   --lightpink: #f4a8b3;
   --green: #5FF95F;
   --teal: #32b5ac;
@@ -15,13 +14,6 @@
   --darkblue: #524DEF;
   --purple: #B946EE;
   --cyan: #00F1D9;
-  --gradientleftright: linear-gradient(to right, var(--pink), var(--purple));
-  --gradientleftrightpinklightpink: linear-gradient(to right, var(--pink), var(--lightpink));
-  --gradientrightleft: linear-gradient(to left, var(--pink), var(--purple));
-  --gradientdown: linear-gradient(var(--pink), var(--purple));
-  --gradientdownwithwhite: linear-gradient(var(--purple), white 5%);
-=======
->>>>>>> 4e1a9ebb6081d6718f31c79c42e87a7466a61562
   --dark: #2e2e2e;
   --light: #ffffff;
   --gradient-to-right-primary-secondary: linear-gradient(to right, var(--primary), var(--secondary));
@@ -31,16 +23,17 @@
   --gradient-primary-down-primary-secondary: linear-gradient(var(--primary), var(--secondary));
   --gradient-to-right-secondary-dsecondary-secondary: linear-gradient(to right, var(--secondary), var(--dimmed-secondary),  var(--secondary));
   --gradient-to-right-primary-dprimary-primary: linear-gradient(to right, var(--primary), var(--dimmed-primary),  var(--primary));
+  --white-gradient: linear-gradient(to right, #F5F7FA, var(--purple), var(--lightpink));
   --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
-  --font-family-title: 'TypoPRO BebasNeue';
+  --font-family-title: 'Bio Sans ExtraBold Italic';
   --font-size-standard: 16px;
   --font-size-small: 1.25rem;
   --font-size-medium: 1.65rem;
   --font-size-large: 2rem;
   --font-size-x-large: 2.5rem;
-  --font-size-xx-large: 3rem;
+  --font-size-xx-large: 4vw;
   --font-size-xxx-large: 4rem;
-  --font-size-huge: 7rem;
+  --font-size-huge: 8vw;
   --font-size-x-huge: 14rem;
 }
 
@@ -58,6 +51,19 @@
   font-weight: 400;
   src: local(''),
        url('../fonts/typopro-bebasneue-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bio Sans Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/Bio-Sans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bio Sans ExtraBold Italic';
+  font-style: normal;
+  src: local(''), url('../fonts/Bio-Sans-ExtraBold-Italic.woff') format('woff');
 }
 
 @keyframes rainbow {
@@ -85,6 +91,7 @@ html {
   font-family: Helvetica;
   font-size: var(--font-size-standard);
   color: var(--dark);
+  scroll-behavior: smooth;
 }
 
 body.navigation-open {
@@ -93,6 +100,7 @@ body.navigation-open {
 
 p {
   line-height: 1.1;
+  font-family: "Bio Sans Regular", serif;
   font-size: var(--font-size-small);
   font-weight: bold;
   text-align: center;
@@ -100,7 +108,7 @@ p {
 
 @media all and (min-width: 850px) {
   p {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
   }
 }
 
@@ -119,7 +127,8 @@ p + p {
   left: 0;
   right: 0;
   height: 80px;
-  background-image: var(--gradient-to-right-primary-secondary);
+  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  animation: rainbow 4s ease-in-out infinite;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,7 +156,7 @@ p + p {
   width: 100%;
   height: 100%;
   right: 0;
-  background-image: var(--gradient-primary-down-primary-secondary);
+  background-image: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
 }
 
 .header__list {
@@ -190,10 +199,10 @@ p + p {
 }
 
 .link {
-  color: rgba(46, 46, 46, 1);
+  color: white;
   transition: color ease-in-out 350ms;
   text-decoration: none;
-  background: linear-gradient(to right, var(--pink), var(--blue),  var(--purple));
+  background: linear-gradient(to right, var(--primary), var(--blue),  var(--purple));
   background-size: 200% 200%;
   animation: rainbow 2s ease-in-out infinite;
   background-clip: text;
@@ -220,7 +229,7 @@ p + p {
 }
 
 .link--white:hover {
-  color:rgba(rgba(255, 255, 255), 0);
+  color:rgba(46, 46, 46, 00);
 }
 
 .link--underline {
@@ -278,21 +287,18 @@ p + p {
 }
 
 .section-banner__text {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-small);
   text-align: center;
   max-width: 500px;
   padding: 20px;
   font-weight: bold;
   text-transform: uppercase;
-
   color: var(--green);
-  -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: grey;
 }
 
 @media all and (min-width: 850px) {
   .section-banner__text {
-    font-size: var(--font-size-xxx-large);
+    font-size: var(--font-size-xx-large);
     text-align: left;
   }
 }
@@ -322,6 +328,12 @@ p + p {
 
 .section__article {
   max-width: 900px;
+  color: white;
+}
+
+.section__article-on-gradient {
+  max-width: 900px;
+  color: black;
 }
 
 .section__article--short {
@@ -337,7 +349,7 @@ p + p {
 }
 
 .section--tickets {
-  background-color: var(--secondary);
+  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
 }
 
 .section--disclaimer {
@@ -354,11 +366,12 @@ p + p {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  color: white;
 }
 
 @media all and (min-width: 600px) {
   .title {
-    font-size: var(--font-size-x-huge);
+    font-size: var(--font-size-huge);
   }
 }
 
@@ -393,13 +406,22 @@ p + p {
   color: rgba(0, 0, 0, 0);
 }
 
+.white-gradient {
+  background: var(--white-gradient);
+  background-size: 200% 200%;
+  animation: rainbow 4s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color: rgba(46, 46, 46, 0);
+}
+
 .title--small {
   font-size: var(--font-size-xx-large);
 }
 
 @media all and (min-width: 600px) {
   .title--small {
-    font-size: var(--font-size-xxx-large);
+    font-size: var(--font-size-xx-large);
   }
 }
 
@@ -416,7 +438,7 @@ p + p {
 }
 
 .wrapper {
-  margin-top: 30px;
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -425,8 +447,8 @@ p + p {
   border-width: 0 4px 4px 0;
   padding: 5px;
   margin-left: 7px;
+  margin-bottom: 4px;
   display: inline-block;
-  position: absolute;
   top: 40%;
   transform: rotate(-45deg) translateY(-50%);
   opacity: 0.6;
