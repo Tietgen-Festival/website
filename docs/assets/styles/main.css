@@ -32,9 +32,7 @@
   --font-size-large: 2rem;
   --font-size-x-large: 2.5rem;
   --font-size-xx-large: 4vw;
-  /* --font-size-xxx-large: 4rem; */
   --font-size-xxx-large: max(26px, min(8vw, 40px));
-/*  --font-size-huge: 8vw; */
   --font-size-huge: max(40px, min(8vw, 70px));
   --font-size-x-huge: 14rem;
 }
@@ -426,16 +424,22 @@ p + p {
   text-align: center;
 }
 
+.sponsorship-package-wrapper {
+  margin-top: 200px;
+}
+
 .arrow {
   border: solid var(--primary);
   border-width: 0 4px 4px 0;
   padding: 5px;
+  margin-top: 5px;
   margin-left: 7px;
   display: inline-block;
   top: 40%;
   transform: rotate(-45deg) translateY(-50%);
   opacity: 0.6;
   transition: all ease-in-out 250ms;
+  vertical-align: middle;
 }
 
 @media all and (min-width: 850px) {
