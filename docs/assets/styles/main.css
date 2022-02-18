@@ -31,9 +31,9 @@
   --font-size-medium: 1.65rem;
   --font-size-large: 2rem;
   --font-size-x-large: 2.5rem;
-  --font-size-xx-large: 4vw;
-  --font-size-xxx-large: 4rem;
-  --font-size-huge: 8vw;
+  --font-size-xx-large: max(1.375rem, min(4vw, 2.8125rem));
+  --font-size-xxx-large: max(1.625rem, min(8vw, 2.5rem));
+  --font-size-huge: max(2.5rem, min(8vw, 4.375rem));
   --font-size-x-huge: 14rem;
 }
 
@@ -88,7 +88,7 @@
 }
 
 html {
-  font-family: Helvetica;
+  font-family: Helvetica, serif;
   font-size: var(--font-size-standard);
   color: var(--dark);
   scroll-behavior: smooth;
@@ -308,6 +308,13 @@ p + p {
   vertical-align: top;
 }
 
+@media all and (max-width: 600px) {
+  .sup {
+    font-size: var(--font-size-small);
+  }
+}
+
+
 .section {
   padding: 20px;
   display: flex;
@@ -388,24 +395,6 @@ p + p {
   color: rgba(46, 46, 46, 0);
 }
 
-.title--primary-gradient {
-  background: var(--gradient-to-right-primary-dprimary-primary);
-  background-size: 200% 200%;
-  animation: rainbow 4s ease-in-out infinite;
-  background-clip: text;
-  -webkit-background-clip:text;
-  color: rgba(46, 46, 46, 0);
-}
-
-.title--secondary-gradient {
-  background: var(--gradient-to-right-secondary-dsecondary-secondary);
-  background-size: 200% 200%;
-  animation: rainbow 4s ease-in-out infinite;
-  background-clip: text;
-  -webkit-background-clip:text;
-  color: rgba(0, 0, 0, 0);
-}
-
 .white-gradient {
   background: var(--white-gradient);
   background-size: 200% 200%;
@@ -442,17 +431,22 @@ p + p {
   text-align: center;
 }
 
+.sponsorship-package-wrapper {
+  margin-top: 200px;
+}
+
 .arrow {
   border: solid var(--primary);
   border-width: 0 4px 4px 0;
   padding: 5px;
+  margin-top: 5px;
   margin-left: 7px;
-  margin-bottom: 4px;
   display: inline-block;
   top: 40%;
   transform: rotate(-45deg) translateY(-50%);
   opacity: 0.6;
   transition: all ease-in-out 250ms;
+  vertical-align: middle;
 }
 
 @media all and (min-width: 850px) {
@@ -461,6 +455,15 @@ p + p {
     border-width: 0 5px 5px 0;
     padding: 8px;
     margin-left: 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .arrow {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    margin-left: 10px;
+    margin-bottom: -2px;
   }
 }
 
