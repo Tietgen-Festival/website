@@ -23,7 +23,7 @@
   --gradient-primary-down-primary-secondary: linear-gradient(var(--primary), var(--secondary));
   --gradient-to-right-secondary-dsecondary-secondary: linear-gradient(to right, var(--secondary), var(--dimmed-secondary),  var(--secondary));
   --gradient-to-right-primary-dprimary-primary: linear-gradient(to right, var(--primary), var(--dimmed-primary),  var(--primary));
-  --white-gradient: linear-gradient(to right, #F5F7FA, var(--purple), var(--lightpink));
+  --white-gradient: linear-gradient(to right, #F5F7FA, var(--purple), #F5F7FA);
   --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
   --font-family-title: 'Bio Sans ExtraBold Italic';
   --font-size-standard: 16px;
@@ -254,6 +254,7 @@ p + p {
   margin-top: 80px;
   z-index: -1;
   object-fit: cover;
+  opacity: 0.6;
 }
 
 .section-banner__claim {
@@ -436,7 +437,7 @@ p + p {
 }
 
 .arrow {
-  border: solid var(--primary);
+  border: solid var(--purple);
   border-width: 0 4px 4px 0;
   padding: 5px;
   margin-top: 5px;
@@ -451,7 +452,7 @@ p + p {
 
 @media all and (min-width: 850px) {
   .arrow {
-    border: solid var(--primary);
+    border: solid var(--purple);
     border-width: 0 5px 5px 0;
     padding: 8px;
     margin-left: 10px;
