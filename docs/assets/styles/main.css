@@ -377,6 +377,16 @@ p + p {
   color: white;
 }
 
+.disclaimer-text {
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.disclaimer-header {
+  margin-bottom: 5px;
+  padding-bottom: 0
+}
+
 @media all and (min-width: 600px) {
   .title {
     font-size: var(--font-size-huge);
