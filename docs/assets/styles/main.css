@@ -459,6 +459,13 @@ p + p {
   margin: 50px 0 50px 0;
 }
 
+@media all and (max-width: 850px) {
+  #sponser-image-container > img {
+    width: 20em;
+    height: 20em;
+  }
+}
+
 .arrow {
   border: solid var(--purple);
   border-width: 0 4px 4px 0;
@@ -530,10 +537,6 @@ p + p {
 
   padding: 10px 10px 0;
   margin-bottom: 20px;
-}
-
-.schedule-block__header--reverse {
-
 }
 
 .schedule-block__content {
@@ -645,6 +648,10 @@ p + p {
   background-color: var(--primary);
   margin: 0 7px 0;
 }
-
+@media all and (max-width: 850px) {
+  .program-image {
+    width: 20em;
+  }
+}
 
 
