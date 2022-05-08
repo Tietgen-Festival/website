@@ -646,5 +646,28 @@ p + p {
   margin: 0 7px 0;
 }
 
+.faq-container {
+  width: 800px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
 
+details > summary {
+  padding: 4px;
+  width: 800px;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+}
+
+details > p {
+  padding: 4px;
+  margin: 0;
+  display: flex;
+}
+
+details {
+  margin: 0 0 15px;
+}
 
