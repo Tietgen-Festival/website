@@ -353,11 +353,16 @@ p + p {
 }
 
 .section--schedule {
-  background-color: var(--light);
+  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+
+}
+
+.section--sponsors {
+  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
 }
 
 .section--tickets {
-  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  background-color: var(--light);
 }
 
 .section--disclaimer {
@@ -522,13 +527,13 @@ p + p {
 .schedule-block__header {
   display: flex;
   align-items: center;
-  background-image: var(--gradient-to-left-primary-secondary);
+
   padding: 10px 10px 0;
   margin-bottom: 20px;
 }
 
 .schedule-block__header--reverse {
-  background-image: var(--gradient-to-right-primary-secondary);
+
 }
 
 .schedule-block__content {
