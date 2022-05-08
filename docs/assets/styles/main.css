@@ -662,9 +662,10 @@ details > summary {
 }
 
 details > p {
+  text-align: left;
   padding: 4px;
   margin: 0;
-  display: flex;
+  font-size: var(--font-size-small);
 }
 
 details {
