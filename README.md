@@ -6,6 +6,10 @@ Repository for the website of Tietgen Festival, found at https://tietgenfestival
 
 The website is automatically deployed with GitHub Pages on merges to `main`. The content in `docs/` is rendered on the specified domain.
 
+## Learning Material
+
+New to static website building with just HTML and CSS? Check out [this blog](https://rutar.org/writing/how-to-build-a-personal-webpage-from-scratch/) post for a gentle introduction.
+
 ## Services Used
 
 | Service         | Address                                                                 |
