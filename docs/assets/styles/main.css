@@ -299,7 +299,7 @@ p + p {
 
 @media all and (min-width: 850px) {
   .section-banner__text {
-    font-size: var(--font-size-xx-large);
+    font-size: var(--font-size-x-large);
     text-align: left;
   }
 }
@@ -455,7 +455,7 @@ p + p {
   margin-top: 50px;
 }
 
-#sponser-image-container {
+#sponsor-image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -464,7 +464,7 @@ p + p {
 }
 
 @media all and (max-width: 850px) {
-  #sponser-image-container > img {
+  #sponsor-image-container > img {
     width: 20em;
     height: 15em;
   }
