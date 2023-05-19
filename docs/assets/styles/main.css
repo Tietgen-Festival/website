@@ -35,6 +35,11 @@
   --font-size-xxx-large: max(1.625rem, min(8vw, 2.5rem));
   --font-size-huge: max(2.5rem, min(8vw, 4.375rem));
   --font-size-x-huge: 14rem;
+
+  --2023-orange: #e49c40;
+  --2023-pink: #eb6fc3;
+  --2023-purple: #6f15f3;
+  --2023-blue: #1101f2;
 }
 
 @font-face {
@@ -127,7 +132,8 @@ p + p {
   left: 0;
   right: 0;
   height: 80px;
-  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  /*background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));*/
+  background: linear-gradient(to right, var(--2023-blue), var(--2023-purple), var(--2023-pink),  var(--2023-orange));
   animation: rainbow 4s ease-in-out infinite;
   display: flex;
   justify-content: space-between;
@@ -156,7 +162,8 @@ p + p {
   width: 100%;
   height: 100%;
   right: 0;
-  background-image: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  /*background-image: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));*/
+  background: linear-gradient(to right, var(--2023-blue), var(--2023-purple), var(--2023-pink),  var(--2023-orange));
 }
 
 .header__list {
@@ -294,7 +301,7 @@ p + p {
   padding: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--2023-pink);
 }
 
 @media all and (min-width: 850px) {
@@ -358,12 +365,14 @@ p + p {
 }
 
 .section--schedule {
-  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  /*background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));*/
+  background: linear-gradient(to right, var(--2023-blue), var(--2023-purple), var(--2023-pink),  var(--2023-orange));
 
 }
 
 .section--sponsors {
-  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  /*background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));*/
+  background: linear-gradient(to right, var(--2023-blue), var(--2023-purple), var(--2023-pink),  var(--2023-orange));
 }
 
 .section--tickets {
@@ -408,7 +417,8 @@ p + p {
 }
 
 .title--gradient {
-  background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));
+  /*background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));*/
+  background: linear-gradient(to right, var(--2023-blue), var(--2023-purple), var(--2023-pink),  var(--2023-orange));
   background-size: 200% 200%;
   animation: rainbow 4s ease-in-out infinite;
   background-clip: text;
