@@ -27,6 +27,7 @@
   --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
   --font-family-title: 'Bio Sans ExtraBold Italic';
   --font-size-standard: 16px;
+  --font-size-tiny: 0.9rem;
   --font-size-small: 1.25rem;
   --font-size-medium: 1.65rem;
   --font-size-large: 2rem;
@@ -411,7 +412,6 @@ p + p {
 }
 
 .title--gradient {
-  /*background: linear-gradient(to right, var(--purple), var(--blue),  var(--cyan),  var(--green));*/
   background: linear-gradient(to right, var(--2023-blue), var(--2023-purple), var(--2023-pink),  var(--2023-orange));
   background-size: 200% 200%;
   animation: rainbow 4s ease-in-out infinite;
@@ -696,4 +696,12 @@ details {
   details > summary {
     width: 100%;
   }
+}
+
+.text--tiny {
+    font-size: var(--font-size-tiny);
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
 }
