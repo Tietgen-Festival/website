@@ -275,12 +275,6 @@ p + p {
   animation-fill-mode: forwards;
 }
 
-@media all and (min-width: 850px) {
-  .section-banner__claim {
-    flex-direction: row;
-  }
-}
-
 .section-banner__logo {
   width: 35vw;
   margin-right: 15px;
