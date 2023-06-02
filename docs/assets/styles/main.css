@@ -705,3 +705,7 @@ details {
 .no-bottom-padding {
     padding-bottom: 0;
 }
+
+.soldout {
+  text-decoration: line-through;
+}
