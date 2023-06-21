@@ -725,6 +725,12 @@ details {
     object-fit: scale-down;
 }
 
+@media all and (max-width: 600px) {
+    #sponsor-grid {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+}
+
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -735,5 +741,5 @@ details {
 }
 
 .logo-container > a {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
 }
