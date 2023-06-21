@@ -23,7 +23,7 @@
     --gradient-primary-down-primary-secondary: linear-gradient(var(--primary), var(--secondary));
     --gradient-to-right-secondary-dsecondary-secondary: linear-gradient(to right, var(--secondary), var(--dimmed-secondary), var(--secondary));
     --gradient-to-right-primary-dprimary-primary: linear-gradient(to right, var(--primary), var(--dimmed-primary), var(--primary));
-    --white-gradient: linear-gradient(to right, #F5F7FA, var(--purple), #F5F7FA);
+    --white-gradient: linear-gradient(to right, #F5F7FA, var(--purple), #F5F7FA, #F5F7FA, var(--purple), #F5F7FA);
     --box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
     --font-family-title: 'Bio Sans ExtraBold Italic';
     --font-size-standard: 16px;
@@ -423,7 +423,7 @@ p + p {
 .white-gradient {
     background: var(--white-gradient);
     background-size: 200% 200%;
-    animation: rainbow 4s ease-in-out infinite;
+    animation: rainbow 6s ease-in-out infinite;
     background-clip: text;
     -webkit-background-clip: text;
     color: rgba(46, 46, 46, 0);
@@ -742,4 +742,16 @@ details {
 
 .logo-container > a {
     font-size: var(--font-size-small);
+}
+
+#schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 1000px;
+    margin: 60px 0 100px;
+    grid-gap: 1em;
+}
+
+#schedule-grid > p {
+    margin: 0;
 }
