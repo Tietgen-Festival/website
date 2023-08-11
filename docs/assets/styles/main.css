@@ -521,6 +521,10 @@ p + p {
     font-family: var(--font-family-title);
 }
 
+.schedule-block:not(:last-child) {
+    margin: 0 10px 0;
+}
+
 @media all and (min-width: 850px) {
     .schedule-content {
         flex-flow: row;
@@ -588,6 +592,13 @@ p + p {
     color: var(--light);
 }
 
+.schedule-block__music {
+    background: var(--light);
+    color: black;
+    mix-blend-mode: screen;
+    padding: 5px;
+}
+
 .schedule-block__text--right {
     text-align: right;
 }
@@ -627,6 +638,7 @@ p + p {
 
 .schedule-block__time {
     width: 105px;
+    white-space: nowrap;
 }
 
 @media all and (min-width: 450px) {
