@@ -765,3 +765,21 @@ details {
 .logo-container > a {
     font-size: var(--font-size-small);
 }
+
+#artist-container {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist-row > td {
+    font-size: var(--font-size-x-large);
+    font-weight: bold;
+    font-family: var(--font-family-title);
+    color: var(--light);
+    text-align: center;
+    padding: 20px 20px;
+    text-transform: uppercase;
+}
